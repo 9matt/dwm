@@ -42,8 +42,9 @@ Also adding keybinds to launch specific programs.
 | `MOD + Alt + F` | [Librewolf](https://librewolf-community.gitlab.io) browser |
 | `MOD + Alt + B` | Brave browser |
 | `MOD + Alt + V` | [vimb](https://fanglingsu.github.io/vimb/) browser with tabbed |
+| `MOD + Alt + H` | virt-manager |
 | `MOD + Alt + L` | Locks screen with slock |
-| `MOD + Alt + M` | Locks screen with slock |
+| `MOD + Alt + M` | Music on console (mocp) |
 | `MOD + Alt + P` | Enable / disable the picom compositor |
 | `MOD + Alt + Q` | lxsession logout prompt |
 | `MOD + Alt + F5` | Restart dwmblocks |

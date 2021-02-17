@@ -135,6 +135,7 @@ static Key keys[] = {
 	{ MODKEY|Mod1Mask,             	XK_v,      spawn,          {.v = tabvimbcmd }  },
 	{ MODKEY|Mod1Mask,             	XK_e,      spawn,          SHCMD("pcmanfm") },
 	{ MODKEY|Mod1Mask,             	XK_l,      spawn,          SHCMD("slock") },
+	{ MODKEY|Mod1Mask,             	XK_h,      spawn,          SHCMD("virt-manager") },
 	{ MODKEY|Mod1Mask,             	XK_q,      spawn,          SHCMD("lxsession-logout") },
 	{ MODKEY|Mod1Mask,             	XK_m,      spawn,          SHCMD("alacritty -e mocp") },
 	{ MODKEY|Mod1Mask,             	XK_p,      spawn,          SHCMD("killall picom || picom &") },
