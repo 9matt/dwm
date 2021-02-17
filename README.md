@@ -1,7 +1,7 @@
 # dwm
 
 My build of the dwm window manager. 
-![A screenshot of my desktop](/screenshots/1.jpg?raw=true)
+![A screenshot of my desktop](/screenshots/1.png?raw=true)
 
 # dynamic window manager & patches
 
@@ -49,3 +49,8 @@ Also adding keybinds to launch specific programs.
 | `MOD + Alt + F5` | Restart dwmblocks |
 | `Crtl + PrtSc` | Area screenshot (flameshot) |
 | `PrtSc` | Fullscreen screenshot (flameshot) |
+
+# More screenshots 
+
+![Screenshot 2](/screenshots/2.png?raw=true)
+![Screenshot 3](/screenshots/3.png?raw=true)
