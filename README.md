@@ -1,11 +1,10 @@
 # dwm
 
-My build of the dwm window manager. 
+My heavily patched build of the suckless window manager - dwm. 
 ![A screenshot of my desktop](/screenshots/1.png?raw=true)
 
-# dynamic window manager & patches
+# Patches
 
-My heavily patched build of the suckless window manager. Patches used are:
 + Attachaside (new windows appear in the stack)
 + Autostart (~/.dwm/autostart.sh is executed after launching dwm)
 + Bar-height (user can change the top bar height in config.h)
