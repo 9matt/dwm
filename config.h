@@ -3,7 +3,7 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int swallowfloating = 0;  /* 1 means swallow floating windows by default */
-static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
+static const unsigned int systraypinning = 1;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;     /* 0 means no systray */
@@ -91,7 +91,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]    = { "dmenu_run", "-h", "22", "-p", "Run: ", NULL };
-static const char *termcmdfish[]  = { "alacritty", "-e", "fish",  NULL };
+static const char *termcmdzsh[]  = { "alacritty", "-e", "zsh",  NULL };
 static const char *termcmdbash[]  = { "alacritty", "-e", "bash",  NULL };
 static const char *tabvimbcmd[]  = { "tabbed", "vimb", "-e", NULL };
 
@@ -100,7 +100,7 @@ static const char *tabvimbcmd[]  = { "tabbed", "vimb", "-e", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY|ShiftMask,     	XK_Return, spawn,          {.v = dmenucmd } },
-	{ MODKEY,               	XK_Return, spawn,          {.v = termcmdfish } },
+	{ MODKEY,               	XK_Return, spawn,          {.v = termcmdzsh } },
 	{ MODKEY|Mod1Mask,             	XK_Return, spawn,          {.v = termcmdbash} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
@@ -180,7 +180,7 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmdfish } },
+	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmdzsh } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
