@@ -93,7 +93,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[]    = { "dmenu_run", "-h", "22", "-p", "Run: ", NULL };
 static const char *termcmdzsh[]  = { "alacritty", "-e", "zsh",  NULL };
 static const char *termcmdbash[]  = { "alacritty", "-e", "bash",  NULL };
-static const char *tabvimbcmd[]  = { "tabbed", "vimb", "-e", NULL };
+// static const char *tabvimbcmd[]  = { "tabbed", "vimb", "-e", NULL };
 
 #include "shiftview.c"
 #include "X11/XF86keysym.h"
@@ -131,15 +131,20 @@ static Key keys[] = {
 	
 	// Launching Programs
 	{ MODKEY|Mod1Mask,             	XK_f,      spawn,          SHCMD("librewolf") },
-	{ MODKEY|Mod1Mask,             	XK_b,      spawn,          SHCMD("brave --new-window --start-fullscreen") },
-	{ MODKEY|Mod1Mask,             	XK_v,      spawn,          {.v = tabvimbcmd }  },
+	{ MODKEY|Mod1Mask,             	XK_v,      spawn,          SHCMD("brave --new-window --start-fullscreen") },
+	{ MODKEY|Mod1Mask,             	XK_b,      spawn,          SHCMD("brave --new-window") },
 	{ MODKEY|Mod1Mask,             	XK_e,      spawn,          SHCMD("pcmanfm") },
 	{ MODKEY|Mod1Mask,             	XK_l,      spawn,          SHCMD("slock") },
 	{ MODKEY|Mod1Mask,             	XK_h,      spawn,          SHCMD("virt-manager") },
 	{ MODKEY|Mod1Mask,             	XK_q,      spawn,          SHCMD("lxsession-logout") },
 	{ MODKEY|Mod1Mask,             	XK_m,      spawn,          SHCMD("alacritty -e mocp") },
 	{ MODKEY|Mod1Mask,             	XK_p,      spawn,          SHCMD("killall picom || picom &") },
-		
+
+	// Dmenu Scripts
+	{ MODKEY,	             	XK_BackSpace,      spawn,          SHCMD("dmconf") },
+	{ MODKEY|ShiftMask,            	XK_BackSpace,      spawn,          SHCMD("dman") },
+	{ MODKEY,            		XK_p,    	   spawn,          SHCMD("dmtuxi") },
+	{ MODKEY|ShiftMask,            	XK_p,    	   spawn,          SHCMD("dmsearch") },
 
 	// Restart the dwmblocks statusbar
 	{ MODKEY|Mod1Mask,             	XK_F5,     spawn,          SHCMD("killall dwmblocks && dwmblocks") },
@@ -170,7 +175,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_BackSpace,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */
