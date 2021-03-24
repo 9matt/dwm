@@ -1,7 +1,7 @@
 # dwm
 
 My heavily patched build of the suckless window manager - dwm. 
-![A screenshot of my desktop](/screenshots/1.png?raw=true)
+![A screenshot of my desktop](/.github/screenshots/1.png?raw=true)
 
 # Patches
 
@@ -52,5 +52,5 @@ Also adding keybinds to launch specific programs.
 
 # More screenshots 
 
-![Screenshot 2](/screenshots/2.png?raw=true)
-![Screenshot 3](/screenshots/3.png?raw=true)
+![Screenshot 2](/.github/screenshots/2.png?raw=true)
+![Screenshot 3](/.github/screenshots/3.png?raw=true)
